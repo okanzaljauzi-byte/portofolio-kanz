@@ -1,0 +1,75 @@
+/* Reset CSS (Best Practice) */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+background-color: #121212;  /* Warna background gelap */
+color: #e0e0e0; /* Warna teks terang */
+}
+/* --- Styling Navigasi --- */
+header {
+background-color:#1e1e1e
+padding: 20px 8%;
+position: sticky;
+top: 0;
+border-bottom: 2px solid  #ff003c;
+
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo { font-size: 24px; font-weight: bold;color: #ffffff; }
+.logo span { color: ##ff003c; /* Warna biru aksen */ }
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { color: #ffffff; text-decoration: none; font-weight: 500; transition: 0.3s;
+}
+.nav-links a:hover { color: #ff003c; }
+/* --- Styling Hero Section --- */
+.hero {
+display: flex; align-items: center; justify-content: space-between;
+padding: 60px 8%; min-height: 80vh;
+}
+.hero-text { flex: 1; }
+.greeting { color: #ff003c; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;letter-spacing: 1px; }
+.hero-text h1 { background: linear-gradient(90deg, #ffffff 0%, #ff003c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.3); }
+.hero-text h2 { font-size: 1.5rem; color: #a0a0a0; margin-bottom: 20px; }
+.description { color: #cccccc; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;max-width: 500px;}
+.btn {
+display: inline-block; padding: 12px 30px; background-color: #ff003c;
+color: #ffffff; text-decoration: none; font-weight: bold; border-radius: 6px; transition: 0.3s;box-shadow: 0 0 15px rgba(255, 0, 60, 0.4);
+}
+.btn:hover { background-color: #d60032;; color: white; transform: translateY(-3px);box-shadow: 0 0 25px rgba(255, 0, 60, 0.7); }
+.hero-image { flex: 1; display: flex; justify-content: flex-end; }
+.hero-image img {
+width: 320px; height: 320px; border-radius: 50%; object-fit: cover;
+border:4px solid 4px solid #ff003c; box-shadow: 0 0 25px rgba(255, 0, 60, 0.5);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 30px rgba(255, 0, 60, 0.6);
+}
+.profil-img{border-radius: 50%;border: 3px solid #e50914;box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);}
+.typing-text {
+  border-right: 3px solid #ff003c;white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #ff003c; }
+}
